@@ -21,7 +21,7 @@ let Contact = () => {
         <div className="Contact">
             <div className="map">
                 <GoogleMapReact
-                    bootstrapURLKeys={{key: 'AIzaSyDJDYdZMb9a5MRNY2Lv9iK_Kw48-JBJGD8'}}
+                    bootstrapURLKeys={{key: }}
                     defaultCenter={prop.center}
                     defaultZoom={prop.zoom}
                 >
