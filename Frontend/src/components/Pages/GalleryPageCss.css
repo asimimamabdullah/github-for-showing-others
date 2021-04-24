@@ -1,0 +1,198 @@
+/* .GalleryPage
+{
+    width: 100%;
+    height: 100%;
+}
+
+.GalleryPage .MainImage
+{
+    width: 100%;
+    height: 80vh;
+    min-height: 20vh;
+    background-image: url('../images/galaxy.jpg');
+} */
+
+
+
+/* body > *:not(#modal) {
+
+    filter: blur(8px);
+} */
+
+
+.Header
+{
+    /* filter: blur(3px) */
+}
+.GalleryPage
+{
+    width: 100%;
+}
+
+.GalleryPage .List
+{
+    width: 40%;
+    margin: 40px 0;
+}
+
+.GalleryPage .List ul
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    list-style-type: none;
+    /* background-color: black; */
+    
+}
+
+.GalleryPage .List ul li
+{
+    background-color: white;
+    padding: 5px;
+    width: fit-content;
+    font-family: 'Montserrat';
+    font-size: 2vw;
+    font-weight: 600;
+    margin: 10px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: .2s all ease-in-out;
+}
+
+.GalleryPage .List ul li:hover
+{
+    background-color: rgba(233, 233, 233, 0.829);
+}
+
+.GalleryPage .List ul li.active
+{
+    background-color: royalblue;
+}
+
+.GalleryPage .Images
+{
+    width: 92%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    /* justify-content: center; */
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.GalleryPage .Images .GalleryPageImage
+{
+    margin: 10px 0;
+    width: 300px;
+    height: 250px;
+    background-color: rgb(26, 25, 25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.GalleryPage .Images img
+{
+    width: contain;
+    max-width: 100%;
+    object-fit: fill;
+    height: contain;
+    max-height: 100%;
+}
+
+.SliderForGalleryPage
+{
+    visibility: hidden;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 92%;
+    width: 92%;
+    height: auto;
+    margin: 0 auto;
+    min-height: 20vh;
+    max-height: 80vh;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    max-width: 92%;
+    background:rgb(26, 25, 25);
+    overflow: hidden;
+}
+
+.show
+{
+    visibility:visible;
+}
+
+.carousalForGalleryPage
+{
+    /* max-width: 100%; */
+    /* position: relative; */
+    width: 100%;
+    object-fit: contain;
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: chocolate;
+    /* max-height: 100%; */
+    transition: transform .4s ease-in-out;
+    transform: translate(0)
+}
+
+.carousalForGalleryPage img{
+    /* max-width: 100%; */
+    /* min-width: 100%; */
+    width: 100%;
+    user-select: none;
+    -webkit-user-drag: none;
+    /* height: fit-content; */
+    
+    max-height: 80vh;
+    /* transition: transform .3s ease-in; */
+    /* background:lawngreen; */
+    object-fit: cover;
+}
+
+.carousal-with-text{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    font-family: 'Montserrat';
+    font-weight: 900;
+    /* min-width: 100%; */
+}
+.carousal-with-text .carousal-text{
+    width: 50%;
+    text-align: center;
+
+}
+
+.carousal-with-text .carousal-img{
+    text-align: center;
+}
+
+
+.buttonCheck
+{
+    width: 100%;
+    height: 200px;
+    width: fit-content;
+
+}
+
+/* .buttonCheck::before
+{
+    content: "\f178";
+    font-size: 2rem;
+    width: fit-content;
+} */
+
+
+/* console.log(`${textIndex} this is text Index`) */

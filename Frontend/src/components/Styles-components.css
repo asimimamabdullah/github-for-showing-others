@@ -1,0 +1,1719 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto&display=swap');
+
+*{
+    margin: 0;
+}
+.Header{
+    position: sticky;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    height: fit-content;
+    flex-wrap: wrap;
+    background-color: rgb(175, 60, 60);
+    box-shadow: 0 1px 6px;
+    z-index: 888;
+}
+
+.main-logo{
+    /* max-width: 190px; */
+    /* min-width: 120px; */
+    width: 250px;
+    /* background: red; */
+    height: 100%;
+    /* width: 20; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.main-logo img{
+    /* width: 90%; */
+    /* min-width: 150px; */
+    width: 200px;
+    height: 95%;
+    /* background: blue; */
+    -webkit-user-drag: none;
+}
+
+nav{
+    /* width: 65%; */
+    font-family: 'Montserrat', Helvetica, sans-serif;
+    /* background: blue; */
+    /* text-align: right; */
+    /* background: royalblue; */
+    /* margin-left: 10px; */
+    /* transition: all .5s ease-in-out; */
+    
+}
+
+nav ul{
+    display: flex;
+    /* justify-content: flex-end; */
+    align-items: center;
+    list-style: none;
+    /* background: wheat; */
+    text-align: right;
+    /* transition: all .5s ease-in-out; */
+}
+
+
+nav ul li{
+    margin: 10px;
+    height: 100%;
+    padding: 10px;
+    transition: all .2s ease-in-out;
+    position: relative;
+}    
+
+
+nav ul li a { 
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: white;
+    width: 100%;
+    height: 100%;
+}
+
+/* nav ul li a::after{
+    content: '';
+    width: 7px;
+    height: 7px;
+    background: rgb(245, 35, 35);
+    position: absolute;
+    bottom: 0; 
+    left: 50%;
+    border-radius: 5px;
+    transition: all .5s ease-out;
+}
+
+nav ul li a:hover::after{
+    width: 100%; 
+    left: 0;
+} */
+
+nav ul li:hover{
+    color: rgb(199, 198, 198);
+
+}
+
+
+.bars{
+    width: 50px;
+    height: 50px;
+    /* border: 2px solid black; */
+    background-color: transparent;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+}
+
+
+.bar{
+    width: 30px;
+    height: 5px;
+    background-color: #fff;
+    border-radius: 4px;
+    transition: all .5s ease-in-out;
+
+}
+
+.bar::after{
+    content: '';
+    width: 30px;
+    height: 5px;
+    background-color: #fff;
+    position: absolute;
+    border: 4px;
+    transform: translateY(10px);
+    transition: all .5s ease-in-out;
+    border-radius: 4px;
+}
+
+.bar::before{
+    content: '';
+    transform: translateY(-10px);
+    width: 30px;
+    position: absolute;
+    height: 5px;
+    background-color: #fff;
+    border-radius: 4px;
+    transition: all .5s ease-in-out;
+    border: 4px;
+}
+
+
+.bars.open .bar{
+    transform: translateX(-50px);
+    background: transparent;
+    border: none;
+}
+
+.bars.open .bar::after{
+    transform: rotate(45deg) translate(35px, -35px);
+}
+
+.bars.open .bar::before{
+    transform: rotate(-45deg) translate(35px, 35px);
+}
+
+
+
+@media only screen and (max-width: 885px){
+
+    .Header{
+        justify-content: center;
+        background-color: brown;
+
+    }
+
+
+    nav ul{
+        display: none;
+        flex-direction: column;
+        justify-content: space-around;
+        background-color: grey;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom:0;
+        width: 100%;
+        /* transform: translateX(100vw); */
+        height: 100%;
+        transition: transform 3s ease-in-out;
+    }
+
+    nav.open ul{
+        display: flex;
+        z-index: 1;
+    }
+
+    nav ul li{
+        transform: translateX(100%);
+    }
+
+    nav.open ul li{
+        transform: translateX(0);
+    }
+    .bars{
+        display: flex;
+        top: 20px;
+        right: 10px;
+        z-index: 3;
+
+    }
+
+
+
+    
+
+}
+
+.dropDown
+{
+    position: relative;
+    /* display: inline-block; */
+}
+
+.dropDown-Content
+{
+    all: initial;
+    position: absolute;
+    display: none;
+    height: max-content;
+    background-color: #c0ddc0;
+    animation-name: check;
+}
+
+.dropDown-Content li
+{
+    all: initial;
+    font-family: 'Montserrat';
+    position: relative;
+    margin: 10px;
+    /* color: lightslategray; */
+    padding: 10px;
+    /* text-align: center; */
+    width: 100%;
+    height: 100%;
+}
+
+.dropDown-Content li a
+{
+    color: lightslategray;
+}
+
+.dropDown-Content:hover
+{
+    /* display: block; */
+}
+
+.dropDown:hover .dropDown-Content
+{
+    display: flex;
+    flex-direction: column;
+    animation-duration: 1s;
+}
+
+@keyframes check {
+    from {top: -300px; opacity: 0;}
+    to { opacity: 1;}
+}
+
+
+
+/* Slider */
+
+body.open{
+    overflow-y: hidden;
+}
+
+
+
+.MainSlider
+{
+    /* position: absolute; */
+    min-width: 100%;
+    overflow: hidden;
+    max-height: max-content;
+    user-select: none;
+    /* height:auto; */
+}
+
+
+
+.Slider{
+    
+    height: fit-content;
+    background-color: brown;
+    width: 100%;
+    display: flex;
+    cursor: grab;
+    overflow: hidden;
+    max-height: 85vh;
+}
+
+
+.carousal { 
+    position: relative;
+    width: 100%;
+    min-width: 100%;
+    transform: translate(0);
+    transition: transform .3s ease-in;    
+}
+
+.carousal-with-text{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    font-family: 'Montserrat';
+    font-weight: 900;
+
+}
+.carousal-with-text .carousal-text{
+    width: 50%;
+    text-align: center;
+
+}
+
+.carousal-with-text .carousal-img{
+    text-align: center;
+}
+.carousal img{
+    width: 100%;
+    user-select: none;
+    -webkit-user-drag: none;
+    height: 100%;
+    transition: transform .3s ease-in;
+}
+
+.MainSlider .Slider .Btns
+{
+    position: absolute;
+    width: 100%;
+}
+.MainSlider .Slider .Btns .PrevBtn,
+.MainSlider .Slider .Btns .NextBtn
+{
+    position: absolute;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background: #fff;
+    font-size: 1.3vw;
+    opacity: 0.5;
+    border-radius: 50%;
+    width: 4vw;
+    height: 4vw;
+    transition: all 0.2s;
+    z-index: 20000;
+
+    /* margin: 20px; */
+}
+
+
+.MainSlider .Slider .Btns .PrevBtn:hover,
+.MainSlider .Slider .Btns .NextBtn:hover
+{
+    opacity: .8;
+}
+
+.MainSlider .Slider .Btns .PrevBtn
+{
+    left: 0;
+    top: 20vw;
+    transform: translate(0, -20%);
+}
+.MainSlider .Slider .Btns .NextBtn
+{
+    right: 0;
+    top: 20vw;
+    transform: translate(0, -20%);
+}
+.grabbing
+{
+    cursor: grabbing;
+}
+
+.grabbing .carousal
+{
+    transition: none;
+}
+
+@media only screen and (max-width: 1175px){
+
+    .MainSlider .Slider .Btns .PrevBtn,
+    .MainSlider .Slider .Btns .NextBtn
+    {
+        height: 5vw;
+        width: 5vw;
+    }
+
+}
+
+@media only screen and (max-width: 938px){
+    .MainSlider .Slider .Btns .PrevBtn,
+    .MainSlider .Slider .Btns .NextBtn
+    {
+        height: 6vw;
+        width: 6vw;
+    }
+}
+
+@media only screen and (max-width: 720px)
+{
+    .MainSlider .Slider .Btns .PrevBtn,
+    .MainSlider .Slider .Btns .NextBtn
+    {
+        height: 7vw;
+        width: 7vw;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .MainSlider .Slider .Btns .PrevBtn,
+    .MainSlider .Slider .Btns .NextBtn
+    {
+        height: 8vw;
+        width: 8vw;
+    }
+}
+
+@media only screen and (max-width: 550px){
+    .MainSlider .Slider .Btns .PrevBtn,
+    .MainSlider .Slider .Btns .NextBtn
+    {
+        height: 9vw;
+        width: 9vw;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .MainSlider .Slider .Btns .PrevBtn,
+    .MainSlider .Slider .Btns .NextBtn
+    {
+        height: 10vw;
+        width: 10vw;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+.Sairuliflaq{
+    /* background-image: url('images/galaxy.jpg'); */
+    /* background-color: brown; */
+    width: 100%;
+    height: 550px;
+    /* background: purple;  */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5vw;
+    color: #fff;
+    /* float: left; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* font-size: 10vmax; */
+}
+
+.Sairuliflaq .img{
+    min-width: 30vw;
+    min-height: 30vw;
+    /* float: left; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border-radius: 100%;
+    border: 5px ridge rosybrown;
+
+    border-style:double groove;
+}
+
+.Sairuliflaq .img img{
+    width: 90%;
+    
+
+}
+
+.Sairuliflaq .text{ 
+    width: 60%;
+    background: transparent;
+}
+
+.Sairuliflaq .text h1{
+    font-size: 1.7em;
+}
+
+.Sairuliflaq .text p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.Sairuliflaq .text .readMore{
+    color: blue;
+}
+
+
+
+@media only screen and (max-width: 1175px){
+
+    
+    .Sairuliflaq{
+        display: flex;
+        flex-direction: column;
+        max-height: 100vh;
+        height: fit-content;
+        /* padding: 10px auto; */
+    }
+
+    .Sairuliflaq .img {
+        min-width: 35vw;
+        min-height: 35vw;
+        margin: 20px auto;
+    }
+    .Sairuliflaq .text {
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    
+}
+
+@media only screen and (max-width: 938px)
+{
+    .Sairuliflaq
+    {
+        /* background: purple; */
+    }
+
+    .Sairuliflaq .img
+    {
+        min-width: 320px;
+        min-height: 320px;
+    }
+}
+
+
+@media only screen and (max-width: 400px){
+
+    .Sairuliflaq
+    {
+        /* background: #f52323; */
+    }
+
+    .Sairuliflaq .img {
+        min-width: 300px;
+        min-height: 300px;
+        margin: 20px auto;
+    }
+
+    .Sairuliflaq .text h1
+    {
+        font-size: 1.4rem;
+    }
+
+    .Sairuliflaq .text p
+    {
+        font-size: .85rem;
+    }
+}
+
+
+@media only screen and (max-width: 368px)
+{
+    .Sairuliflaq .img
+    {
+        min-width: 200px;
+        min-height: 200px;
+    }
+}
+
+
+
+
+
+
+/* Book Section */
+
+.MainBookSectionAll
+{
+    width: 100%;
+    min-width: 100%;
+    height: 100vh;
+    background: green;
+}
+
+.BookSection 
+{
+    max-width: 100%;    
+    width: 80%;
+    height: 75%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Montserrat';
+    margin: 20px auto 10px auto;
+    user-select: none;
+}
+
+.BookSection .sideRotatedText
+{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    width: 350px;
+    transform: rotate(-90deg) translateY(-80px);
+    position: absolute;
+    left: 0;
+    transition: 1s all ease;
+}
+
+.BookSection .sideRotatedText .line
+{
+    width: 100px;
+    height: 1px;
+    border-radius: 1px;
+}
+.BookSection .BookSectionTitle
+{
+    width: max-content;
+    margin-left: 20px;
+    color: #fff;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size:larger;
+}
+
+
+
+.BookSection .textSection 
+{
+    width: 40%;
+    height: 80%;
+    background: #ebe4e4;
+    margin: 0 40px;
+}
+
+
+
+.BookSection .Books
+{
+    min-width: 45%;
+    width: 45%;
+    height: 80%;
+    transform: translateY(-70px);
+    display: flex;
+    overflow: hidden;
+    cursor: grab;
+
+}
+
+.BookSection .Books .otherSection
+{
+    min-width: 100%;
+    height: 100%;
+    background: lightgray;
+    transform: translateX(0);
+    transition: transform .4s ease-in-out;
+
+    /* margin: 0 10px 0 0; */
+    /* transform: translateX(-200px); */
+}
+
+
+.Books.grab {
+    cursor: grabbing;
+    /* transition: none; */
+}
+
+.Books.grab .otherSection
+{
+    transition: transform .1s ease-in-out;
+}
+
+.BookSection .otherSection .flexSection
+{
+    width: calc(100% - 30px);
+    height: calc(75% - 20px);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 15px;
+
+}
+
+
+.BookSection .otherSection::before
+{
+    content: '';
+    width: 70%;
+    height: 20px;
+    position: absolute;
+    right: 0;
+    top: -20px;
+    background:#f52323;
+}
+
+
+.BookSection .otherSection::after
+{
+    content: '';
+    width: 70%;
+    height: 20px;
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+    background: #f52323;
+}
+
+
+.BookSection .otherSection .textSection1 
+{
+    width: 60%;
+}
+
+.BookSection .otherSection .textSection1 h1
+{
+    font-size: 2.4vmax;
+}
+
+.BookSection .otherSection .imageSection
+{
+    width: fit-content;
+    background:transparent;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.BookSection .otherSection .imageSection img
+{
+    width: 65%;
+    height: 90%;
+    
+}
+
+
+.BookSection .otherSection .button 
+{
+    width: 35%;
+    /* text-align: center; */
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+
+}
+
+.BookSection .otherSection .button button 
+{
+    width: 100%;
+    height: 40px;
+    color: #fff;
+    outline: none;
+    border: 0;
+    background: rgb(245, 72, 72);
+    font-family: 'Montserrat';
+    font-size: 1.2rem;
+    box-shadow: none;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.BookSection .otherSection .button button:hover 
+{
+
+    background: rgb(241, 44, 44);
+    font-size: 1.4rem;
+    transform: scale(1.1);
+
+}
+
+.BooksImagesForSlide
+{
+    width: 45%;   
+    min-width: 45%;
+    height: 20%;
+    max-height: 20%;
+    /* background: blue; */
+    display: flex;
+    margin-left: 50%;
+}
+
+.BooksImagesForSlide .imageSlide
+{
+    /* max-width: 80%;
+    max-height: 80%; */
+    max-width: fit-content;
+    /* background: blue; */
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid rgba(255, 68, 0, 0.473);
+    cursor: pointer;
+    transition: .3s all ease-out;
+}
+
+.BooksImagesForSlide .imageSlide:hover
+{
+    border: 3px solid orangered;
+}
+
+.BooksImagesForSlide .imageSlide img
+{
+    /* width: 100%; */
+    /* height: 100%; */
+    width: 90%;
+    height: 90%;
+}
+
+
+
+
+
+
+@media only screen and (max-width: 1268px){
+    .BookSection .sideRotatedText
+    {
+        /* display: none; */
+    }
+
+    .BookSection .textSection
+    {
+        width: 45%;
+        height: 70%;
+    }
+
+    .BookSection .Books
+    {
+        width: 50%;
+        height: 75%;
+    }
+
+    .BooksImagesForSlide
+    {
+        width: 60%;
+        margin: 0 auto;
+    }
+}
+
+
+@media only screen and (max-width: 1024px){
+
+    .BookSection 
+    {
+        justify-content: center;
+
+    }
+
+    /* .BookSection .sideRotatedText
+    {
+        display: block;
+    } */
+
+    .BookSection .textSection {
+        /* width: 50%;
+        height: 70%; */
+        display: none;
+    }
+
+    .BookSection .Books {
+        width: 75%;
+        /* padding-left: 10px; */
+        height: 75%;
+        transform: translateY(0);
+    }
+
+    .BooksImagesForSlide
+    {
+        width: 70%;
+    }
+}
+
+
+@media only screen and (max-width: 768px){
+
+    .BookSection .Books
+    {
+        width: 75%;
+    }
+
+    .BooksImagesForSlide
+    {
+        width: 75%;
+    }
+}
+
+@media only screen and (max-width: 720px){
+
+
+    .BookSection
+    {
+        width: 100%;
+
+    }
+
+    .BookSection .sideRotatedText
+    {
+        display: none;
+    }
+
+
+    .BookSection .Books
+    {
+        width: 90%;
+        height: 75%;
+    }
+
+    .BookSection .otherSection::after, .otherSection::before
+    {
+        display: none;
+    }
+
+
+    .BooksImagesForSlide
+    {
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 600px){
+    .BookSection .Books {
+        width: 100%;
+        height: 85%;
+    }
+
+    .BooksImagesForSlide
+    {
+        width: 100%;
+    }
+
+    .BooksImagesForSlide .imageSlide
+    {
+        margin: 0 5px;
+    }
+}
+
+
+@media only screen and (max-width: 430px){
+
+
+    .BookSection
+    {
+        width: 100%;
+    }
+
+    .BookSection .Books
+    {
+        height: 85%;
+        width: 100%;
+    }
+    .BookSection .otherSection .button
+    {
+        width: 45%;
+    }
+
+    .BookSection .otherSection .button button
+    {
+        font-size: 1rem;
+    }
+
+    .BookSection .otherSection .button button:hover
+    {
+        font-size: 1.2rem;
+    }
+
+    .BooksImagesForSlide .imageSlide {
+        margin: 0 2px;
+    }
+
+}
+
+
+
+
+
+
+
+
+/* Gallery */
+
+.Gallery
+{
+    text-align: center;
+    /* background: blue; */
+    height: 70vh;
+    width: 100%;
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    font-family: 'Montserrat';
+}
+
+.Gallery .AbsoluteText 
+{
+    min-width: 20%;
+    width: 20%;
+    height: 85%;
+    background: rgb(211, 185, 185);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    z-index: 1;
+    max-height: 100vh;
+}
+
+.Gallery .AbsoluteText
+{
+    font-size: 1rem;
+    /* color: white; */
+}
+
+.Gallery .EventsImagesSection
+{
+    display: flex;
+    align-items:center;
+    /* justify-content: space-around; */
+    /* position: relative; */
+    background: transparent;
+    min-width: 75%;
+    overflow: hidden;
+    /* height: 75%; */
+}
+
+
+
+.CardForGallery
+{
+    min-width: calc(33.33% - 20px);
+    height: fit-content;
+    margin: 10px;
+    background: rgb(240, 139, 139);
+    /* padding: 10px; */
+    overflow: hidden;
+    transition: .4s;
+    /* transform: translateX(-200px); */
+
+}
+
+.CardForGallery h1, .CardForGallery p
+{
+    margin: 0 10px;
+}
+.CardForGallery:hover
+{
+    transform: scale(1.05) translateY(-10px);
+}
+
+.CardForGallery img
+{
+    width: 100%;
+    min-height: calc(100% - 20px);
+
+}
+
+
+
+@media only screen and (max-width: 1175px)
+{
+    .Gallery .AbsoluteText h1
+    {
+        font-size: 1.5rem;
+    }
+
+}
+
+@media only screen and (max-width: 768px)
+{
+    .Gallery .CardForGallery
+    {
+        min-width: calc(50% - 20px);
+    }
+}
+
+
+@media only screen and (max-width: 650px)
+{
+
+    .Gallery .AbsoluteText
+    {
+        display: none;
+    }
+
+    .Gallery .EventsImagesSection
+    {
+        min-width: 100%;
+        height: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 501px)
+{
+    .Gallery .CardForGallery
+    {
+        /* margin: 0 auto; */
+        min-width: calc(100% - 20px);
+        background: none;
+        color: white;
+        padding: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Contact  */
+
+/* .Contact 
+{
+    color: #fff;
+    font-family: 'Montserrat';
+    height: 70vh;
+    background: brown;
+    min-width: 100%;
+}
+
+
+.ContactContainer
+{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 23% 50% 25%;
+    grid-column-gap: 1%;
+    grid-row-gap: 1em;
+    text-align: center;
+    transition: 1s;
+    min-height: 100%;
+    font-family: 'Montserrat';
+}
+
+.ContactContainer div
+{   
+    background: lightblue;
+    height: 80%;
+}
+
+.ContactTextSection
+{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.ContactMainSection 
+{
+    background:rgb(201, 183, 183);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    width: 100%;
+
+}
+
+.ContactMainSection .ContactMainSectionForm
+{
+    width: 70%;
+}
+
+.ContactMainSection .ContactMainSectionForm input
+{
+    outline: none;
+    box-shadow: none;
+    border: none;
+    border-bottom: 3px solid red;
+    width: 100%;
+    height: 30px;
+    margin: 10px auto;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.ContactMainSection .ContactMainSectionForm button
+{
+    outline: none;
+    box-shadow: none;
+    padding: .7em 2em;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    background: royalblue;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border: 2px solid rgb(23, 75, 231);
+    color: #fff;
+    transition: .3s all;
+    cursor: pointer;
+}
+
+.ContactMainSection .ContactMainSectionForm button:hover
+{
+    background:rgb(23, 75, 231);
+    border: 2px solid rgb(4, 63, 240);
+} */
+
+
+.Contact {
+    color: #fff;
+    font-family: 'Montserrat', 'Roboto';
+    height: 70vh;
+    background: brown;
+    min-width: 100%;
+    width: 100%;
+    display: flex;
+    /* grid-template-columns: 55% 45%; */
+    justify-content: center;
+}
+
+.Contact .map
+{
+    width: 50%;
+}
+
+.Contact .TextSection
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    line-height: 2;
+    width: 50%;
+    user-select: none;
+    
+}
+
+.Contact .TextSection .iconsLinks
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+}
+
+.Contact .TextSection .iconsLinks p
+{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: rgb(185, 182, 182);
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 3px 3px 10px;
+    transition: .4s ease-in-out;
+    font-size: inherit;
+    font-weight: 500;
+    user-select: none;
+    transform: scale(1) translateY(0);
+    margin: 0 5px;
+}
+
+
+.Contact .TextSection .iconsLinks p:hover
+{
+    background: rgb(138, 134, 134);
+    transform: translateY(-10px) scale(1.4);
+    box-shadow: 2px 7px 10px;
+
+}
+
+
+
+@media only screen and (max-width: 650px)
+{
+    .Contact .map
+    {
+        display: none;
+    }
+    .Contact .TextSection
+    {
+        width: 100%;
+        background: lightgray;
+        color: black;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Footer */
+
+.Footer
+{
+    width: 100%;
+    min-width: 100%;
+    padding-top: 80px;
+    height: fit-content;
+    color: white;
+    display: flex;
+    font-family: 'Montserrat';
+}
+
+.Footer div
+{
+    text-align: center;
+    line-height: 2;
+  
+}
+.Footer .Books
+{
+    width: 100%;
+
+}
+
+.Footer .footerRoutes
+{
+    width: 100%;
+}
+
+.Footer .footerMain
+{
+    width: 100%;
+}
+
+
+.Footer div p
+{
+    margin: 10px auto;
+    width: fit-content;
+}
+
+.Footer div p:hover
+{
+    background: brown;
+}
+
+
+
+@media only screen and (max-width: 650px)
+{
+
+    .Footer 
+    {
+        margin-bottom: 80px;
+    }
+    .Footer div h1
+    {
+        font-size: 1.5rem;
+    }
+
+    .Footer div p
+    {
+        font-size: .9rem;
+    }
+}
+
+
+
+@media only screen and (max-width: 450px)
+{
+    .Footer 
+    {
+        flex-direction: column;
+    }
+
+    .Footer div h1 {
+        font-size: 2.5rem;
+    }
+
+    .Footer div p {
+        font-size: 1.1rem;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MailingList */
+
+/* .SubscriberList
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 40vh;
+    background: blue;
+    margin: 0 0 20px 0;
+    
+}
+
+.SubscriberList div
+{
+    width: 50%;
+    background: greenyellow;
+    height: 100%;
+    margin: 0 10px;
+} */
+
+
+
+
+/* MailingList */
+
+/* .MailingList{
+    width: 100%;
+    height: 70vh;
+    
+    margin: 30px 0;
+}
+
+.MailingList h1{
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 5vw;
+    letter-spacing: .4px;
+    padding: 2vh 1vw;
+}
+
+.MailingListForm
+{
+    height: 50%;
+
+}
+
+.MailingList .email 
+{
+  
+}
+
+
+.MailingFlex
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.MailingListForm .email, .phone{
+    position: relative;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+.MailingListForm .email label, .phone label{
+    color: white;
+    font-family: 'Montserrat';
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: .6px;
+    margin: 0 10px;
+}
+
+.MailingList .phone input,
+.MailingList .email input
+{
+    padding: 5px 20px;
+    line-height: 2;
+    margin: 10px 0;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+}
+
+.MailingList .phone input, .MailingList .email input::placeholder,
+.MailingList .email input, .MailingList .phone input::placeholder {
+    font-family: 'Montserrat';
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+
+.MailingButton
+{
+    display: flex;
+    justify-content: center ;
+    clear: both;
+}
+
+.MailingList .MailingSubmitButton
+{
+    background: rgb(194, 149, 36);
+    color: white;
+    outline: none;
+ 
+    border: none;
+    padding: 5px 15px;
+    margin: 10px;
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 3px;
+    transition: all .4s ease-in-out;
+    cursor: pointer;
+    width: 180px;
+    height: 60px;
+}
+
+.MailingListForm .MailingSubmitButton:hover
+{
+    background: rgb(165, 132, 47);
+    
+}
+
+
+@media only screen and (max-width: 768px)
+{
+    .MailingListForm .email, .phone
+    {
+        width: 90%;
+    }
+    
+    .MailingFlex
+    {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @keyframes fade{
+    0%{
+    }
+    50%{
+        margin-left: -1520px; 
+        margin-left: -1264px;
+
+    }
+    90%{
+        margin-left: 0;
+    }
+} */
+
+/* #slider{
+    overflow: hidden;
+    background-color: purple;
+}
+
+#slider figure{
+    position: relative;
+    width: 600%;
+    margin: 0;
+    left: 0;
+    transform: scale(0);
+
+    animation: 3s slider infinite;
+
+}
+
+#slider figure .img{
+    width: 16.666%;
+    float: left;
+}
+
+#slider figure .img img{
+    width: 100%;
+}
+@keyframes slider{
+    0%{
+        left: 0;
+    }
+    15%{
+        left: 0;
+        transform: scale(.9);
+    }
+    16.66%{
+        transform: scale(0);
+        left: -16.66%;
+    }
+    32%{
+        left: -16.66%;
+    }
+    33.32%{
+        left: -33.32%;
+    }
+    48%{
+        left: -33.32%;
+    }
+    49.98%{
+        left: -49.98%;
+    }
+    65%{
+        left: -49.98;
+    }
+    66.64%{
+        left: -66.64;
+    }
+    82%{
+        left: -66.64;
+    }
+    83.30%{
+        left: -83.30;
+    }
+    98%{
+        left: -83.30;
+    }
+    100%{
+        left: -100%;
+    }
+}
+
+.svg
+{
+    width: 400px;
+}
+.svg img{
+    width: 100%;
+}
+
+
+.slider-img-txt{
+
+}  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

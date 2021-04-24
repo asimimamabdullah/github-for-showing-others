@@ -1,0 +1,211 @@
+.BooksPage
+{
+    font-family: 'Montserrat';
+    font-weight: 600;
+    width: 100%;
+    /* height: 1000px; */
+    /* background: rgb(236, 232, 232); */
+}
+
+
+.bookCard
+{
+
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items:flex-start;
+    flex-wrap: wrap;
+    margin: 130px auto;
+    /* min-height: 50vh; */
+    /* height: fit-content; */
+    /* max-height: fit-content; */
+    height: max-content;
+    color: rgb(224, 218, 218);
+
+}
+
+.bookCard .bookCardImg
+{
+    background: honeydew;
+    min-width: 180px;
+    width: 250px;
+    height: fit-content;
+    /* height: 400px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bookCardImg img
+{
+    width: 95%;
+}
+
+.bookCardText
+{
+    display: flex; 
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    /* text-align: center; */
+    /* flex-wrap: wrap; */
+    height: 50%;
+    /* margin-left: 40px; */
+}
+
+
+.bookCardButton
+{
+    margin-top: 50px;
+    /* width: 50%; */
+    display: flex;
+    /* justify-content:center; */
+}
+.bookCardButton button 
+{
+    width: 200px;
+    height: 40px;
+    outline: none;
+    background:rgb(226, 241, 16);
+    border: none;
+    transition: all .4s ease-in;
+    cursor: pointer;
+    font-size:x-large;
+    
+}
+
+.bookCardButton button:hover
+{
+    background:rgb(189, 201, 26);
+    box-shadow: 5px 5px 15px 1.8px;
+}
+
+table
+{
+    border-collapse:separate; 
+    border-spacing: 1em 2em;
+    width: 100%;
+    position: relative;
+}
+
+table tbody tr
+{
+    width: 100%;
+    position: relative;
+
+}
+
+
+table tbody tr td
+{
+    position: relative;
+
+    width: 50%;
+    /* background:honeydew; */
+    /* padding: 15px; */
+    transition: background .2s ease-in-out;
+    word-wrap:normal;
+    /* cursor:auto */
+}
+
+table tr td::before
+{
+    content: '';
+    position:absolute;    
+    height: 100%;
+    width: 5px;
+    top: 0;
+    left: 0;
+    background: #800080;
+    transition: width .7s ease-in;
+    z-index: -1;
+    border-radius: 0 40px 40px 0;
+}
+
+table tr td:hover::before
+{
+    width: 100%;
+    border-radius: 0;
+
+}
+
+
+table tr td:hover
+{
+    color: rgb(0, 0, 0);
+    /* background: green; */
+}
+
+table > * > * > td{
+    padding: 15px;
+    color: rgb(224, 218, 218);
+    /* width: 100%; */
+}
+
+table .writer, table .publisher
+{
+    text-transform: uppercase;
+}
+
+@media only screen and (max-width: 1350px)
+{
+    .bookCard
+    {
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 1105px)
+{
+    .bookCard
+    {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bookCardText
+    {
+        text-align: center;
+    }
+
+    .bookCardButton
+    {
+        justify-content: center;
+        width: 100%;
+    }
+    
+
+
+
+}
+
+@media only screen and (max-width: 520px)
+{
+    table
+    {
+    table-layout: fixed;
+
+    }
+
+
+    table tr
+    {
+        width: 100%;
+    }
+
+    table tr td
+    {
+        width: 100%;
+    }
+}
+
+/* @media only screen and (max-width: 1070px)
+{
+    .bookCard
+    {
+        width: 100%;
+    }
+} */

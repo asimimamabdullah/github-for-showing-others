@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+.Dashboard
+{
+    position: relative;
+    width: 100%;
+
+}
+
+.navigation
+{
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background-color: brown;
+    transition: .5s;    
+    overflow: hidden;
+}
+
+.navigation.active
+{
+    width: 60px;
+}
+
+.navigation ul
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0;
+}
+
+.navigation ul li
+{
+    
+    position: relative;
+    width: 100%;
+    list-style-type: none;
+}
+
+.navigation ul li:hover{
+    background: grey;
+}
+
+.navigation ul li:nth-child(1)
+{
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.navigation ul li:first-child:hover{
+    background: transparent;
+}
+
+.navigation ul li a 
+{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navigation ul li a .icon
+{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 70px;
+    /* display: flex; */
+    /* align-items: center; */
+    /* background: tomato; */
+    text-align: center;
+}
+
+.navigation ul li a .title
+{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    white-space: nowrap;
+}
+
+.Dashboard .main
+{
+    position: absolute;
+    width: calc(100% - 300px);
+    left: 300px;
+    min-height: 100vh;
+    background: #f5f5f5;
+    transition: .5s;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.Dashboard .main.active
+{
+    width: calc(100% - 60px);
+    left: 60px;
+}
+
+
+.main .topbar
+{
+    width: 100%;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    /* padding: 0 10px 0 0; */
+    align-items: center;
+    /* padding: 0 10px; */
+}
+
+.main .topbar .toggle
+{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.Dashboard .main .user
+{
+    position: relative;
+    min-width: 50px;
+    height: 50px;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+.Dashboard .main .user img
+{
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+    user-select: none;
+    object-fit: cover ;
+}
+
+
+.Dashboard .main .cardBox
+{
+    /* position: relative; */
+    width: calc(100% - 40px);
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+    /* grid-template-columns: repeat(1, 1fr); */
+    grid-gap: 30px;
+    /* justify-content: center; */
+    font-family: 'Poppins', sans-serif;
+}
+
+.Dashboard .main .cardBox .card
+{
+    position: relative;
+    display: flex;
+    background: #fff;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.Dashboard .main .cardBox .card .numbers
+{
+    font-size: 2em;
+}
+
+.Dashboard .main .cardBox .card .cardName
+{
+    color: #999;
+}
+
+.iconBox img
+{
+    /* color: blue; */
+}
+
+.Dashboard .main .GalleryManage
+{
+    position: relative;
+    top: 0;
+    margin: 0;
+    padding: 20px;
+    width: calc(100% - 40px);
+}
+
+
+.Dashboard .wrapper
+{
+    width: calc(100% - 40px);
+    position: relative;
+    padding: 20px;
+    display: flex;
+    /* background: #fff; */
+    align-items:stretch;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+/* .Dashboard .wrapper .images
+{
+    position: relative;
+    width: 200px;
+    margin: 10px;
+    display: flex;
+    background: brown;
+}
+
+.Dashboard .wrapper .images img
+{
+    position: relative;
+    min-width: 100%;
+} */
+
+
+.Dashboard .wrapper .imageCard
+{
+    width: 280px;
+    min-width: 280px;
+    height: 270px;
+    margin: 10px;
+    background: #fff;
+    border-radius: 2px;
+    box-shadow: 0px 1px 5px #999;
+}
+
+.Dashboard .wrapper .imageCard .imgSec
+{
+    background: #cdd4e6;
+    position: relative;
+    /* max-width: 100%; */
+    height: 80%;
+    max-height: 80%;
+    display: flex;
+    align-items: center;
+}
+
+.Dashboard .wrapper .imageCard .imgSec img
+{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+ }
+
+.Dashboard .wrapper .imageCard .name span
+{
+    font-size: .9em;
+    color: #999;
+    padding: 0 5px;
+    position: relative;
+    bottom: -10px;
+}
+
+.hr{
+    border-top: 1px solid salmon;
+    position: relative;
+    bottom: -15px;
+}
+
+.Dashboard .wrapper .imageCard .fileType
+{
+    position: relative;
+    bottom: -15px;
+    display: flex;
+    color: #999;
+    justify-content: space-between;
+    padding: 0 5px;
+}
+
+.Dashboard .wrapper .imageCard .fileType span
+{
+    font-size: .8em;
+}

@@ -1,0 +1,123 @@
+body{
+    /* box-sizing: border-box; */
+    margin: 0;
+    padding: 0;
+    /* overflow-x: hidden; */
+    background-color: #a52a2a;
+    height: fit-content;
+    
+}
+
+.Slider{
+    background-color: brown;
+}
+
+
+
+
+/* 
+.erte{
+    display: flex;
+    background-color: purple;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.erte img{
+    width: 300px;
+    background-size: cover;
+
+}
+.carousal-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Slider{
+  
+    height: 80vh;
+    background-color: brown;
+    width: 600%;
+    display: flex;
+    overflow: hidden;
+}
+
+.carousal { 
+    position: relative;
+
+    width: 16.66%;
+}
+
+.anim{
+    animation: example 20s infinite;
+}
+@keyframes example{
+    0%{
+        left: 0;
+    }
+    16.66%{
+        left: -16.66%;
+    }
+    33.32%{
+        left: -33.32%;
+    }
+
+    49.98%{
+        left: -49.98%;
+    }
+    66.64%{
+        left: -66.64%;
+    }
+    83.30%{
+        left: -83.30%;
+    }
+    100%{
+        left: 0%;
+    }
+}
+
+.carousal img{
+    width: 100%;
+    user-select: none;
+    -webkit-user-drag: none;
+} */
+
+/* @keyframes fade{
+    0%{
+    }
+    50%{
+        margin-left: -1520px; 
+        margin-left: -1264px;
+
+    }
+    90%{
+        margin-left: 0;
+    }
+} */
+
+
+
+
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(202, 90, 90); 
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(192, 35, 35); 
+}

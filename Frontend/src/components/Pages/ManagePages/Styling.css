@@ -1,0 +1,211 @@
+
+
+select
+{
+    font-family: 'Montserrat';
+}
+
+
+.SliderForm
+{
+    height: 100%;
+    width: 60%;
+    margin: 0 auto;
+    text-align: left;
+    font-family: 'Montserrat';
+}
+
+.SliderForm input[type=text]
+{
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: 0.5px solid;
+    outline: none;
+    margin: 10px 0;
+    transition: .5s;
+}
+
+.SliderForm input[type=file]
+{
+    width: 100%;
+    height: 40px;
+    outline: none;
+    margin: 10px 0;
+    transition: 0.5s;
+
+}
+
+.SliderForm input[type=text]:focus
+{
+    border: 3px solid steelblue;
+}
+
+
+
+.SliderForm label{
+    padding: 0 5px;
+}
+
+
+
+.SliderFormSubmitButton
+{
+    height: 40px;
+    width: 230px;
+    outline: none;
+    background: royalblue;
+    border: none;
+    font-size: x-large;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    border: 2px solid rgb(56, 84, 170);
+    transition: .4s;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.SliderFormSubmitButton:hover
+{
+    background: rgba(65, 105, 225, 0.781);
+}
+
+
+/* Gallery Form */
+
+.GalleryForm
+{
+    height: 100%;
+    width: 60%;
+    margin: 0 auto;
+    text-align: left;
+    font-family: 'Montserrat';
+}
+
+
+.GalleryForm input[type=text]
+{
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: 0.5px solid;
+    outline: none;
+    margin: 10px 0;
+    transition: .5s;
+}
+
+
+.GalleryForm input[type=file]
+{
+    width: 100%;
+    height: 40px;
+    outline: none;
+    margin: 10px 0;
+    transition: 0.5s;
+
+}
+
+
+.GalleryForm input[type=text]:focus
+{
+    border: 3px solid steelblue;
+}
+
+
+.GalleryForm label{
+    padding: 0 5px;
+}
+
+
+
+.GalleryFormSubmitButton
+{
+    height: 40px;
+    width: 230px;
+    outline: none;
+    background: royalblue;
+    border: none;
+    font-size: x-large;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    border: 2px solid rgb(56, 84, 170);
+    transition: .4s;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.GalleryFormSubmitButton:hover
+{
+    background: rgba(65, 105, 225, 0.781);
+}
+
+
+
+/* Books Form */
+
+
+.BooksForm
+{
+    height: 100%;
+    width: 60%;
+    margin: 0 auto;
+    text-align: left;
+    font-family: 'Montserrat';
+}
+
+
+.BooksForm input[type=text]
+{
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: 0.5px solid;
+    outline: none;
+    margin: 10px 0;
+    transition: .5s;
+}
+
+
+.BooksForm input[type=file]
+{
+    width: 100%;
+    height: 40px;
+    outline: none;
+    margin: 10px 0;
+    transition: 0.5s;
+
+}
+
+
+.BooksForm input[type=text]:focus
+{
+    border: 3px solid steelblue;
+}
+
+
+.BooksForm label{
+    padding: 0 5px;
+}
+
+
+
+.BooksFormSubmitButton
+{
+    height: 40px;
+    width: 230px;
+    outline: none;
+    background: royalblue;
+    border: none;
+    font-size: x-large;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    border: 2px solid rgb(56, 84, 170);
+    transition: .4s;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.BooksFormSubmitButton:hover
+{
+    background: rgba(65, 105, 225, 0.781);
+}

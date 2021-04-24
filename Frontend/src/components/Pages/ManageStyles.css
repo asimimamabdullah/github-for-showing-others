@@ -1,0 +1,28 @@
+.Manage
+{
+    font-family: 'Montserrat', 'Roboto';
+    height: 1000px;
+    background-color: #f8f9fa;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    line-height: 3;
+}
+
+
+.SelectorForm
+{
+    width: 100%;
+}
+
+.SelectorForm select
+{
+    width: 60%;
+    height: 40px;
+}
+
+.SelectorForm select option
+{
+    height: 40px;
+}
+
